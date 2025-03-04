@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Images</title>
+</head>
+<body>
+    <h1>Tải lên hai ảnh để xử lý</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file2">Ảnh lớn (b.jpg):</label>
+        <input type="file" id="file2" name="file2" required><br><br>
+        <button type="submit">Xử lý ảnh</button>
+    </form>
+
+    <!-- Hiển thị kết quả -->
+    {% if result_image %}
+        <h2>Kết quả xử lý ảnh</h2>
+        <img src="{{ url_for('uploaded_file', filename=result_image) }}" alt="Kết quả">
+    {% endif %}
+</body>
+</html>
