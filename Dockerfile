@@ -13,8 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Sao chép toàn bộ ứng dụng vào container
 COPY . .
 
-# Mở cổng 5000 để chạy ứng dụng Flask
 EXPOSE 5000
 
 # Chạy ứng dụng Flask
-CMD ["python", "app.py"]
+CMD ["python", "main.py"]
